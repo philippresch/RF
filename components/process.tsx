@@ -1,9 +1,9 @@
 import {
-  Crosshair,
-  ListChecks,
+  ClipboardCheck,
+  RefreshCw,
   Rocket,
+  Route,
   ScanSearch,
-  TrendingUp,
 } from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
@@ -12,51 +12,51 @@ const steps = [
   {
     number: "01",
     icon: ScanSearch,
-    title: "Analyse",
+    title: "Kostenfreie Erstanalyse",
     description:
-      "Ist-Situation: Wir analysieren Vertrieb, Marketing, Team und Kennzahlen – und identifizieren, wo Wachstum heute blockiert wird.",
+      "30 Minuten, standardisierte Prüfpunkte entlang Ihrer gesamten Umsatzkette: Sichtbarkeit, Nachfrage, Direktansprache, Vertriebsprozess und Team.",
   },
   {
     number: "02",
-    icon: Crosshair,
-    title: "Zieldefinition",
+    icon: ClipboardCheck,
+    title: "Wachstums-Audit",
     description:
-      "Soll-Situation: Gemeinsam definieren wir messbare Wachstumsziele und priorisieren, was den grössten Hebel hat.",
+      "Zwei Wochen, Festpreis, bei Folgeauftrag vollständig angerechnet: Diagnose Ihres Engpasses, Zahlenmodell für Ihr Umsatzziel und priorisierte Massnahmen.",
   },
   {
     number: "03",
-    icon: ListChecks,
-    title: "Massnahmenplan",
+    icon: Route,
+    title: "Wachstumsplan",
     description:
-      "Ob Outbound, Marketing oder Vertriebsteam – wir legen die Massnahmen fest, die Ihre Ziele am wirksamsten erreichen.",
+      "Ihre individuelle Konfiguration aus unseren Leistungsbausteinen — mit klarer Reihenfolge, Verantwortlichkeiten und Kennzahlen je Baustein.",
   },
   {
     number: "04",
     icon: Rocket,
     title: "Umsetzung",
     description:
-      "Wir setzen die Massnahmen um – im Betrieb durch uns oder gemeinsam mit Ihrem Team.",
+      "Wir setzen die Bausteine um: im laufenden Betrieb für Sie (Managed) oder als Aufbau mit Übergabe an Ihr Team (Build & Transfer).",
   },
   {
     number: "05",
-    icon: TrendingUp,
-    title: "Erfolgskontrolle",
+    icon: RefreshCw,
+    title: "Quartals-Review",
     description:
-      "Wir verfolgen Umsetzung und KPIs laufend, berichten transparent und justieren die Massnahmen, bis die Ziele erreicht sind.",
+      "Alle drei Monate: Kennzahlen je Baustein, Rekonfiguration, nächste Ausbaustufe. So bleibt der Plan an Ihrem Wachstum ausgerichtet.",
   },
 ] as const;
 
 export function Process() {
   return (
-    <section id="prozess" className="border-t border-foreground/10 py-24 sm:py-32">
+    <section id="vorgehen" className="border-t border-foreground/10 py-24 sm:py-32">
       <div className="px-6 sm:px-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-              Der Prozess
+              Unser Vorgehen
             </p>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-              Vom Status quo zu planbarem Wachstum
+              Vom Engpass zum Wachstumsplan
             </h2>
           </div>
         </Reveal>

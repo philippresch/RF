@@ -16,7 +16,8 @@ export function Contact() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
             30 Minuten, keine Verkaufspräsentation: Wir analysieren Ihre
-            aktuelle Vertriebssituation und zeigen konkret, wo Potenzial liegt.
+            aktuelle Situation entlang der gesamten Umsatzkette und zeigen
+            konkret, wo Ihr Engpass liegt.
           </p>
         </div>
 

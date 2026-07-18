@@ -45,7 +45,7 @@ export default function OpengraphImage() {
             Ihr Wachstumspartner für B2B-Tech & Robotic
           </div>
           <div style={{ fontSize: 28, color: "#71717a", maxWidth: 880 }}>
-            Strategie · Neukundengewinnung · Vertriebsaufbau — DACH
+            Sichtbarkeit · Direktansprache · Vertriebsstruktur — DACH
           </div>
         </div>
 

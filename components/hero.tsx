@@ -13,7 +13,7 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground sm:text-xs">
-          Strategie · Neukundengewinnung · Vertriebsaufbau
+          Sichtbarkeit · Direktansprache · Vertriebsstruktur
         </p>
 
         <h1 className="mx-auto max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
@@ -24,8 +24,9 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-          B2B-Vertriebsberatung für Technologie- und Robotik-Unternehmen im
-          DACH-Raum.
+          Wir finden den Engpass in Ihrer Neukundengewinnung — und lösen ihn
+          mit dem passenden Mix aus Marketing, Direktansprache und
+          Vertriebsstruktur.
         </p>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -43,9 +44,9 @@ export function Hero() {
             variant="outline"
             className="h-11 w-full px-7 sm:w-auto"
             nativeButton={false}
-            render={<a href="#prozess" />}
+            render={<a href="#vorgehen" />}
           >
-            Unsere Methodik
+            Unser Vorgehen
           </Button>
         </div>
       </div>

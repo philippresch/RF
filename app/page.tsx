@@ -1,18 +1,20 @@
+import { Audit } from "@/components/audit";
 import { Contact } from "@/components/contact";
 import { Faq } from "@/components/faq";
 import { Hero } from "@/components/hero";
+import { Modules } from "@/components/modules";
+import { Packages } from "@/components/packages";
 import { Process } from "@/components/process";
 import { Reveal } from "@/components/reveal";
-import { Services } from "@/components/services";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { Trust } from "@/components/trust";
+import { StartingPoints } from "@/components/starting-points";
 import { faqItems } from "@/lib/faq";
 import { siteConfig } from "@/lib/site";
 
 /**
  * Structured Data (JSON-LD) für SEO & GEO:
- * ProfessionalService beschreibt das Unternehmen und die Leistungen,
+ * ProfessionalService beschreibt das Unternehmen und die Leistungsbausteine,
  * FAQPage macht die FAQ-Inhalte für Such- und KI-Systeme maschinenlesbar.
  */
 const structuredData = {
@@ -48,43 +50,80 @@ const structuredData = {
       ],
       knowsAbout: [
         "B2B Vertriebsberatung",
-        "Go-to-Market-Strategie",
         "Neukundengewinnung",
-        "Umsatzwachstum",
-        "Vertriebsaufbau",
         "B2B Leadgenerierung",
+        "LinkedIn Ads",
+        "Outbound Vertrieb",
+        "Vertriebsaufbau",
+        "Umsatzwachstum",
         "Robotik",
         "B2B Technologie",
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Leistungen",
+        name: "Leistungsbausteine",
         itemListElement: [
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Go-to-Market-Strategie",
+              name: "Wachstums-Audit",
               description:
-                "Strategische Grundlage für planbares Umsatzwachstum: Zielmarkt, Positionierung, Angebotsarchitektur und Wachstums-Roadmap.",
+                "Zweiwöchige Diagnose zum Festpreis: Engpass-Analyse, Zahlenmodell für das Umsatzziel und Wachstumsplan mit priorisierten Leistungsbausteinen.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Neukundengewinnung",
+              name: "Paid Ads",
               description:
-                "Aufbau und Betrieb der Neukundengewinnung: quellenverifizierte Kontaktrecherche, Multichannel-Kampagnen und qualifizierte B2B-Termine.",
+                "LinkedIn- und Google-Kampagnen inklusive Landingpage, Tracking und Retargeting für planbare Inbound-Anfragen.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Vertriebsaufbau & Team",
+              name: "Content & Sichtbarkeit",
               description:
-                "Aufbau von Vertriebsprozessen und -teams: CRM-Automation, Playbooks, Besetzung von Vertriebsrollen und Befähigung zum Eigenbetrieb.",
+                "Case Studies und LinkedIn-Präsenz für Unternehmen und Geschäftsführung.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Outbound-System",
+              description:
+                "Quellenverifizierte Kontaktrecherche und Multichannel-Kampagnen über Telefon, E-Mail und LinkedIn für qualifizierte Termine mit Entscheidern.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Vertriebsprozess & CRM",
+              description:
+                "Pipeline-Stufen, Automationen, Playbooks und Forecasting.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Team",
+              description:
+                "Rollenprofile, Recruiting-Unterstützung, Onboarding und Befähigung von Vertriebsmitarbeitern.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Sales-Coaching",
+              description:
+                "Wöchentliche Pipeline-Reviews und Gesprächscoaching für Vertriebsteams.",
             },
           },
         ],
@@ -117,11 +156,11 @@ export default function Home() {
         {/* Optimus-Grid: feine vertikale Linien rahmen den Inhalt ein */}
         <div className="mx-auto max-w-6xl border-x border-foreground/15">
           <Hero />
-          <Services />
+          <StartingPoints />
           <Process />
-          <Reveal>
-            <Trust />
-          </Reveal>
+          <Modules />
+          <Packages />
+          <Audit />
           <Reveal>
             <Faq />
           </Reveal>

@@ -4,8 +4,9 @@ import { AnchorLink } from "@/components/anchor-link";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "/#leistungen", label: "Leistungen" },
-  { href: "/#prozess", label: "Prozess" },
+  { href: "/#vorgehen", label: "Vorgehen" },
+  { href: "/#bausteine", label: "Bausteine" },
+  { href: "/#pakete", label: "Pakete" },
   { href: "/ueber-uns", label: "Über uns", page: true },
   { href: "/#faq", label: "FAQ" },
 ];
