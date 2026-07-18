@@ -17,9 +17,13 @@ export function SiteHeader() {
         aria-label="Hauptnavigation"
         className="mx-auto flex h-16 max-w-6xl items-center justify-between border-x border-foreground/15 px-6"
       >
-        <Link href="/" className="text-sm font-bold tracking-[0.18em] text-foreground">
+        <AnchorLink
+          href="/#top"
+          aria-label="R&F Consulting — zur Startseite"
+          className="text-sm font-bold tracking-[0.18em] text-foreground"
+        >
           R&amp;F CONSULTING
-        </Link>
+        </AnchorLink>
 
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => {
