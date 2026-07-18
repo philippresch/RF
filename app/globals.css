@@ -127,6 +127,10 @@
   html {
     @apply scroll-smooth font-sans;
   }
+  /* Anker-Ziele nicht unter der fixierten Navbar (h-16) verstecken */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
   ::selection {
     background: var(--foreground);
     color: var(--background);

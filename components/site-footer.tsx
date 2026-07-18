@@ -1,4 +1,12 @@
-import { siteConfig } from "@/lib/site";
+import Link from "next/link";
+
+const footerLinks = [
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/#kontakt", label: "Kontakt" },
+  { href: "/agb", label: "AGB" },
+  { href: "/impressum", label: "Impressum" },
+  { href: "/datenschutz", label: "Datenschutz" },
+];
 
 export function SiteFooter() {
   return (
@@ -10,37 +18,16 @@ export function SiteFooter() {
         <p className="text-xs text-muted-foreground">
           B2B-Vertriebsberatung · Tech &amp; Robotics · DACH
         </p>
-        <nav aria-label="Rechtliches" className="flex items-center gap-6 text-xs">
-          <a
-            href="/ueber-uns"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Über uns
-          </a>
-          <a
-            href="/agb"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            AGB
-          </a>
-          <a
-            href="/impressum"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Impressum
-          </a>
-          <a
-            href="/datenschutz"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Datenschutz
-          </a>
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Kontakt
-          </a>
+        <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs">
+          {footerLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </footer>

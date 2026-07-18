@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Trust() {
   return (
     <section className="border-t border-foreground/10 py-20 sm:py-24">
@@ -9,12 +11,12 @@ export function Trust() {
           Unsere Methodik basiert auf eigener Vertriebspraxis: Mit diesem
           Vorgehen haben wir selbst Robotik im DACH-Markt vertrieben.
         </p>
-        <a
+        <Link
           href="/ueber-uns"
           className="mt-6 inline-block text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
         >
           Mehr über uns und unsere Geschichte
-        </a>
+        </Link>
       </div>
     </section>
   );
