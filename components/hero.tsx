@@ -43,9 +43,9 @@ export function Hero() {
             variant="outline"
             className="h-11 w-full px-7 sm:w-auto"
             nativeButton={false}
-            render={<a href="#strategie" />}
+            render={<a href="#prozess" />}
           >
-            Unsere Strategie
+            Unsere Methodik
           </Button>
         </div>
       </div>

@@ -128,7 +128,7 @@ export default function UeberUnsPage() {
                   geschärft, Outbound-Prozesse aufgebaut, ein CRM-gestütztes
                   Vertriebssystem entwickelt und im Markt bewiesen – im
                   Wettbewerb, mit echten Quoten. Aus dieser Praxis stammen
-                  unsere Strategie, unsere Playbooks und unser Anspruch:
+                  unsere Methodik, unsere Playbooks und unser Anspruch:
                   Wachstum messbar zu machen statt Aktivität zu verkaufen.
                 </p>
               </div>
