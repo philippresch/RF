@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { AnchorLink } from "@/components/anchor-link";
+
 const footerLinks = [
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/#kontakt", label: "Kontakt" },
@@ -19,15 +21,18 @@ export function SiteFooter() {
           B2B-Vertriebsberatung · Tech &amp; Robotics · DACH
         </p>
         <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs">
-          {footerLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {footerLinks.map((link) => {
+            const Component = link.href.includes("#") ? AnchorLink : Link;
+            return (
+              <Component
+                key={link.href}
+                href={link.href}
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </Component>
+            );
+          })}
         </nav>
       </div>
     </footer>
