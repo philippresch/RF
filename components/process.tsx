@@ -1,4 +1,10 @@
-import { Crosshair, ListChecks, Rocket, ScanSearch } from "lucide-react";
+import {
+  Crosshair,
+  ListChecks,
+  Rocket,
+  ScanSearch,
+  TrendingUp,
+} from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
 
@@ -29,7 +35,14 @@ const steps = [
     icon: Rocket,
     title: "Umsetzung",
     description:
-      "Wir setzen die Massnahmen um – im Betrieb durch uns oder gemeinsam mit Ihrem Team, mit klaren KPIs und voller Transparenz.",
+      "Wir setzen die Massnahmen um – im Betrieb durch uns oder gemeinsam mit Ihrem Team.",
+  },
+  {
+    number: "05",
+    icon: TrendingUp,
+    title: "Erfolgskontrolle",
+    description:
+      "Wir verfolgen Umsetzung und KPIs laufend, berichten transparent und justieren die Massnahmen, bis die Ziele erreicht sind.",
   },
 ] as const;
 
@@ -48,7 +61,7 @@ export function Process() {
           </div>
         </Reveal>
 
-        <ol className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {steps.map((step, index) => (
             <li key={step.number} className="h-full">
               <Reveal delay={index * 80} className="h-full">
