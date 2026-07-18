@@ -33,6 +33,6 @@ export const faqItems = [
   {
     question: "Sind wir langfristig vertraglich gebunden?",
     answer:
-      "Nein. Laufende Mandate sind nach der Anlaufphase monatlich kündbar. Beim Aufbau mit Übergabe gehört das komplette System inklusive Playbooks, Vorlagen und Runbooks ohnehin Ihnen. Wir binden Kunden über Ergebnisse, nicht über Vertragslaufzeiten.",
+      "Nein. Laufende Mandate sind nach der Anlaufphase monatlich kündbar. Wir binden Kunden über Ergebnisse, nicht über Vertragslaufzeiten.",
   },
 ] as const;

@@ -18,7 +18,7 @@ export function SiteFooter() {
           R&amp;F CONSULTING
         </p>
         <p className="text-xs text-muted-foreground">
-          B2B-Vertriebsberatung · Tech &amp; Robotics · DACH
+          B2B-Vertriebsberatung · Tech &amp; Robotic · DACH
         </p>
         <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs">
           {footerLinks.map((link) => {
