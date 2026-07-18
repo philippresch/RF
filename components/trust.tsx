@@ -8,7 +8,7 @@ export function Trust() {
           Aus der Praxis
         </p>
         <p className="mt-6 text-xl font-semibold leading-relaxed tracking-tight text-foreground sm:text-2xl">
-          Unsere Methodik basiert auf eigener Vertriebspraxis: Mit diesem
+          Unsere Strategie basiert auf eigener Vertriebspraxis: Mit diesem
           Vorgehen haben wir selbst Robotik im DACH-Markt vertrieben.
         </p>
         <Link

@@ -48,12 +48,12 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="prozess" className="border-t border-foreground/10 py-24 sm:py-32">
+    <section id="strategie" className="border-t border-foreground/10 py-24 sm:py-32">
       <div className="px-6 sm:px-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-              Der Prozess
+              Unsere Strategie
             </p>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
               Vom Status quo zu planbarem Wachstum
