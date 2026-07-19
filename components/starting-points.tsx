@@ -33,13 +33,13 @@ export function StartingPoints() {
               Ausgangslagen
             </p>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-              Jedes Wachstum stockt woanders
+              Wo liegt Ihr grösster Wachstumshebel?
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Zu wenige Anfragen, zu wenige Termine oder ein Vertrieb, der
-              nicht skaliert — der Engpass ist bei jedem Unternehmen anders.
-              Deshalb beginnt jede Zusammenarbeit mit einer Diagnose, nicht
-              mit einem Standardpaket.
+              Mehr Sichtbarkeit, mehr qualifizierte Termine oder ein Vertrieb,
+              der mitwächst — wo das grösste Potenzial liegt, ist bei jedem
+              Unternehmen anders. Deshalb beginnt jede Zusammenarbeit mit
+              einer Analyse, nicht mit einem Standardpaket.
             </p>
           </div>
         </Reveal>

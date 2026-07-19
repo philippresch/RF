@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "R&F Consulting sind Matthias Frech und Philipp Resch: Gründer der Aurobots GmbH, die selbst Robotik im DACH-Markt vertrieben haben – heute Wachstumspartner für B2B-Tech- und Robotik-Unternehmen.",
+    "R&F Consulting sind Matthias Frech und Philipp Resch: Gründer der Aurobots GmbH mit eigener Vertriebspraxis im DACH-Markt – heute Wachstumspartner für Technologie-, Industrie- und Robotik-Unternehmen.",
 };
 
 const founders = [
@@ -83,11 +83,11 @@ export default function UeberUnsPage() {
               <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {siteConfig.name} ist die Beratungsmarke der{" "}
                 {siteConfig.legal.companyName} aus Wetzikon ZH. Als Gründer
-                haben wir mit Aurobots selbst Robotik im DACH-Markt
-                vertrieben – von der ersten Kaltakquise bis zum
-                Robots-as-a-Service-Geschäftsmodell. Genau diese
-                Vertriebspraxis stellen wir heute Technologie- und
-                Robotik-Unternehmen zur Verfügung.
+                haben wir selbst erklärungsbedürftige Technologie im
+                DACH-Markt vertrieben – von der ersten Kaltakquise bis zum
+                As-a-Service-Geschäftsmodell in der Robotik. Genau diese
+                Vertriebspraxis stellen wir heute Technologie-, Industrie-
+                und Robotik-Unternehmen zur Verfügung.
               </p>
             </div>
           </section>
@@ -100,7 +100,19 @@ export default function UeberUnsPage() {
                   key={founder.name}
                   className="rounded-xl border border-border bg-card p-8 transition-colors hover:border-ring/60"
                 >
-                  <p className="text-base font-bold text-foreground">
+                  {/* Foto — [Platzhalter] */}
+                  <div className="flex size-20 flex-col items-center justify-center rounded-full border border-dashed border-border">
+                    <span className="text-lg font-bold text-muted-foreground">
+                      {founder.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-[10px] uppercase tracking-widest text-muted-foreground">
+                    [Foto folgt]
+                  </p>
+                  <p className="mt-5 text-base font-bold text-foreground">
                     {founder.name}
                   </p>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">

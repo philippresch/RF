@@ -24,9 +24,9 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-          Wir finden den Engpass in Ihrer Neukundengewinnung — und lösen ihn
-          mit dem passenden Mix aus Marketing, Direktansprache und
-          Vertriebsstruktur.
+          Mehr Leads, stärkere Abschlüsse, planbares Wachstum: Wir
+          analysieren Ihre Vertriebsstruktur und heben Ihre
+          Neukundengewinnung aufs nächste Level.
         </p>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

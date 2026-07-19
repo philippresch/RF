@@ -1,5 +1,7 @@
 "use server";
 
+import { siteConfig } from "@/lib/site";
+
 export type ContactFormState = {
   status: "idle" | "success" | "error";
   message?: string;
@@ -32,9 +34,49 @@ export async function submitContactRequest(
     };
   }
 
-  // TODO vor Launch: E-Mail-Versand anbinden (z. B. Resend) oder CRM-Webhook.
-  // Bis dahin wird die Anfrage nur serverseitig protokolliert.
-  console.log("[Kontaktanfrage]", { name, email, company, message });
+  /**
+   * E-Mail-Versand über Resend (https://resend.com).
+   * Aktivierung: Env-Variablen in Vercel setzen —
+   *   RESEND_API_KEY  = API-Key aus dem Resend-Dashboard
+   *   CONTACT_TO      = Empfängeradresse (optional, Standard: siteConfig.email)
+   *   CONTACT_FROM    = verifizierte Absenderadresse (optional)
+   * Ohne API-Key wird die Anfrage nur serverseitig protokolliert.
+   */
+  const apiKey = process.env.RESEND_API_KEY;
+  if (apiKey) {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from:
+          process.env.CONTACT_FROM ?? "R&F Consulting <onboarding@resend.dev>",
+        to: [process.env.CONTACT_TO ?? siteConfig.email],
+        reply_to: email,
+        subject: `Erstanalyse-Anfrage: ${company}`,
+        text: [
+          `Name: ${name}`,
+          `E-Mail: ${email}`,
+          `Unternehmen: ${company}`,
+          "",
+          "Nachricht:",
+          message || "(keine Angabe)",
+        ].join("\n"),
+      }),
+    });
+
+    if (!res.ok) {
+      console.error("[Kontaktanfrage] Resend-Fehler", res.status, await res.text());
+      return {
+        status: "error",
+        message: `Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an ${siteConfig.email}.`,
+      };
+    }
+  } else {
+    console.log("[Kontaktanfrage]", { name, email, company, message });
+  }
 
   return {
     status: "success",

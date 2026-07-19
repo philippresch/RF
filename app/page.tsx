@@ -1,10 +1,12 @@
 import { Audit } from "@/components/audit";
 import { Contact } from "@/components/contact";
 import { Faq } from "@/components/faq";
+import { FounderVideo } from "@/components/founder-video";
 import { Hero } from "@/components/hero";
 import { Modules } from "@/components/modules";
 import { Packages } from "@/components/packages";
 import { Process } from "@/components/process";
+import { Proof } from "@/components/proof";
 import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -162,10 +164,12 @@ export default function Home() {
         {/* Optimus-Grid: feine vertikale Linien rahmen den Inhalt ein */}
         <div className="mx-auto max-w-6xl border-x border-foreground/15">
           <Hero />
+          <FounderVideo />
           <StartingPoints />
           <Process />
           <Modules />
           <Packages />
+          <Proof />
           <Audit />
           <Reveal>
             <Faq />
