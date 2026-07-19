@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "R&F Consulting sind Matthias Frech und Philipp Resch: Gründer der Aurobots GmbH mit eigener Vertriebspraxis im DACH-Markt – heute Wachstumspartner für Technologie-, Industrie- und Robotik-Unternehmen.",
+    "R&F Consulting sind Matthias Frech und Philipp Resch: Unternehmer, die mit dem eigenen Unternehmen in drei Monaten eine siebenstellige Pipeline und sechsstelligen Umsatz aufgebaut haben – heute Wachstumspartner für Technologie-, Industrie- und Robotik-Unternehmen.",
 };
 
 const founders = [
@@ -81,13 +81,12 @@ export default function UeberUnsPage() {
                 <span className="text-muted-foreground">eigener Praxis</span>
               </h1>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                {siteConfig.name} ist die Beratungsmarke der{" "}
-                {siteConfig.legal.companyName} aus Wetzikon ZH. Als Gründer
-                haben wir selbst erklärungsbedürftige Technologie im
-                DACH-Markt vertrieben – von der ersten Kaltakquise bis zum
-                As-a-Service-Geschäftsmodell in der Robotik. Genau diese
-                Vertriebspraxis stellen wir heute Technologie-, Industrie-
-                und Robotik-Unternehmen zur Verfügung.
+                Innerhalb der ersten drei Monate haben wir mit unserem
+                eigenen Unternehmen eine siebenstellige Vertriebspipeline und
+                sechsstelligen Umsatz aufgebaut – im Direktvertrieb
+                erklärungsbedürftiger Technologie im DACH-Markt. Genau dieses
+                Vorgehen stellen wir heute Technologie-, Industrie- und
+                Robotik-Unternehmen zur Verfügung.
               </p>
             </div>
           </section>
@@ -130,7 +129,7 @@ export default function UeberUnsPage() {
           <section className="border-t border-foreground/10 px-6 py-20 sm:px-10">
             <div className="mx-auto max-w-3xl">
               <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
-                Warum ein Wachstumspartner mit Robotik-Hintergrund?
+                Warum wir?
               </h2>
               <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
                 <p>
