@@ -1,9 +1,11 @@
 "use client";
 
 import { useActionState } from "react";
+import { X } from "lucide-react";
 
 import { submitContactRequest, type ContactFormState } from "@/app/actions";
 import { Button } from "@/components/ui/button";
+import { removeItem, useInquirySelection } from "@/lib/inquiry";
 
 const initialState: ContactFormState = { status: "idle" };
 
@@ -11,6 +13,7 @@ const inputClasses =
   "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-colors focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30";
 
 export function ContactForm() {
+  const selection = useInquirySelection();
   const [state, formAction, isPending] = useActionState(
     submitContactRequest,
     initialState
@@ -43,6 +46,34 @@ export function ContactForm() {
         aria-hidden="true"
         className="hidden"
       />
+
+      {/* Auswahl aus Bausteinen/Paketen */}
+      {selection.length > 0 ? (
+        <div className="rounded-lg border border-border bg-card px-4 py-3">
+          <p className="text-xs font-semibold uppercase tracking-widest text-foreground">
+            Ihre Auswahl
+          </p>
+          <div className="mt-2.5 flex flex-wrap gap-2">
+            {selection.map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
+              >
+                {item}
+                <button
+                  type="button"
+                  onClick={() => removeItem(item)}
+                  aria-label={`${item} entfernen`}
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <X className="size-3" aria-hidden="true" />
+                </button>
+              </span>
+            ))}
+          </div>
+          <input type="hidden" name="interesse" value={selection.join("; ")} />
+        </div>
+      ) : null}
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>

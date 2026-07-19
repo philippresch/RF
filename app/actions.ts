@@ -20,6 +20,7 @@ export async function submitContactRequest(
   const email = String(formData.get("email") ?? "").trim();
   const company = String(formData.get("company") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
+  const interesse = String(formData.get("interesse") ?? "").trim();
 
   if (!name || !email || !company) {
     return {
@@ -60,10 +61,13 @@ export async function submitContactRequest(
           `Name: ${name}`,
           `E-Mail: ${email}`,
           `Unternehmen: ${company}`,
+          interesse ? `Interesse: ${interesse}` : null,
           "",
           "Nachricht:",
           message || "(keine Angabe)",
-        ].join("\n"),
+        ]
+          .filter((line) => line !== null)
+          .join("\n"),
       }),
     });
 
@@ -75,7 +79,7 @@ export async function submitContactRequest(
       };
     }
   } else {
-    console.log("[Kontaktanfrage]", { name, email, company, message });
+    console.log("[Kontaktanfrage]", { name, email, company, interesse, message });
   }
 
   return {

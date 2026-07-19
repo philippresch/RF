@@ -1,5 +1,9 @@
+"use client";
+
 import { Reveal } from "@/components/reveal";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { selectPaket } from "@/lib/inquiry";
 
 type Package = {
   name: string;
@@ -85,6 +89,15 @@ export function Packages() {
                 <p className="mt-5 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {pkg.description}
                 </p>
+                <Button
+                  variant="outline"
+                  className="mt-6 h-10 w-full"
+                  nativeButton={false}
+                  onClick={() => selectPaket(pkg.name)}
+                  render={<a href="#kontakt" />}
+                >
+                  Paket anfragen
+                </Button>
               </div>
             </Reveal>
           ))}

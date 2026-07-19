@@ -1,4 +1,8 @@
+"use client";
+
 import {
+  ArrowRight,
+  Check,
   GraduationCap,
   Megaphone,
   Newspaper,
@@ -8,6 +12,13 @@ import {
 } from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
+import { Button } from "@/components/ui/button";
+import {
+  isBausteinSelected,
+  toggleBaustein,
+  useInquirySelection,
+} from "@/lib/inquiry";
+import { cn } from "@/lib/utils";
 
 type Module = {
   icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
@@ -81,11 +92,42 @@ const groups: ModuleGroup[] = [
   },
 ];
 
-function ModuleCard({ module, delay }: { module: Module; delay: number }) {
+function ModuleCard({
+  module,
+  delay,
+  selected,
+}: {
+  module: Module;
+  delay: number;
+  selected: boolean;
+}) {
   return (
     <Reveal delay={delay} className="h-full">
-      <div className="flex h-full flex-col rounded-xl border border-border bg-card p-7 transition-colors hover:border-ring/60">
-        <module.icon className="size-4 text-muted-foreground" aria-hidden />
+      <button
+        type="button"
+        onClick={() => toggleBaustein(module.name)}
+        aria-pressed={selected}
+        className={cn(
+          "flex h-full w-full cursor-pointer flex-col rounded-xl border bg-card p-7 text-left transition-all duration-200",
+          selected
+            ? "-translate-y-0.5 border-foreground/40"
+            : "border-border hover:border-ring/60"
+        )}
+      >
+        <div className="flex items-center justify-between">
+          <module.icon className="size-4 text-muted-foreground" aria-hidden />
+          <span
+            className={cn(
+              "flex size-5 items-center justify-center rounded-full border transition-colors",
+              selected
+                ? "border-foreground bg-foreground text-background"
+                : "border-border text-transparent"
+            )}
+            aria-hidden="true"
+          >
+            <Check className="size-3" />
+          </span>
+        </div>
         <h3 className="mt-5 text-base font-bold text-foreground">{module.name}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
           {module.description}
@@ -96,12 +138,15 @@ function ModuleCard({ module, delay }: { module: Module; delay: number }) {
           </p>
           <p className="mt-1 text-sm font-medium text-foreground">{module.kpi}</p>
         </div>
-      </div>
+      </button>
     </Reveal>
   );
 }
 
 export function Modules() {
+  const selection = useInquirySelection();
+  const selectedCount = selection.filter((s) => s.startsWith("Baustein:")).length;
+
   return (
     <section id="bausteine" className="border-t border-foreground/10 py-24 sm:py-32">
       <div className="px-6 sm:px-10">
@@ -116,8 +161,8 @@ export function Modules() {
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               Jeder Baustein hat einen klaren Leistungsumfang, einen fixen
               Setup- und Monatspreis und eine Kennzahl, an der wir uns messen
-              lassen. Welche Bausteine zum Einsatz kommen, entscheidet Ihr
-              Wachstumsplan.
+              lassen. Wählen Sie die Bausteine aus, die Sie interessieren —
+              oder lassen Sie den Wachstumsplan entscheiden.
             </p>
           </div>
         </Reveal>
@@ -135,11 +180,36 @@ export function Modules() {
               </Reveal>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {group.modules.map((module, index) => (
-                  <ModuleCard key={module.name} module={module} delay={index * 80} />
+                  <ModuleCard
+                    key={module.name}
+                    module={module}
+                    delay={index * 80}
+                    selected={isBausteinSelected(selection, module.name)}
+                  />
                 ))}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Auswahl-Aktion */}
+        <div
+          className={cn(
+            "mt-8 flex justify-center transition-opacity duration-300",
+            selectedCount > 0 ? "opacity-100" : "pointer-events-none opacity-0"
+          )}
+          aria-hidden={selectedCount === 0}
+        >
+          <Button
+            className="h-11 px-7"
+            nativeButton={false}
+            render={<a href="#kontakt" />}
+          >
+            {selectedCount === 1
+              ? "1 Baustein anfragen"
+              : `${selectedCount} Bausteine anfragen`}
+            <ArrowRight data-icon="inline-end" />
+          </Button>
         </div>
 
         {/* Betriebsmodi */}
