@@ -43,6 +43,12 @@ const structuredData = {
         name,
         jobTitle: "Geschäftsführer",
       })),
+      parentOrganization: {
+        "@type": "Organization",
+        name: siteConfig.legal.companyName,
+        url: "https://www.aurobots.ch",
+      },
+      sameAs: ["https://www.aurobots.ch"],
       areaServed: [
         { "@type": "Country", name: "Deutschland" },
         { "@type": "Country", name: "Österreich" },

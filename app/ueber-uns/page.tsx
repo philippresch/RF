@@ -37,6 +37,12 @@ const aboutJsonLd = {
     name: siteConfig.name,
     legalName: siteConfig.legal.companyName,
     url: siteConfig.url,
+    parentOrganization: {
+      "@type": "Organization",
+      name: siteConfig.legal.companyName,
+      url: "https://www.aurobots.ch",
+    },
+    sameAs: ["https://www.aurobots.ch"],
     founder: founders.map((f) => ({
       "@type": "Person",
       name: f.name,
