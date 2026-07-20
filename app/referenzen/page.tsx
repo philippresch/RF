@@ -126,7 +126,7 @@ export default function ReferenzenPage() {
                   Vor der Kampagne
                 </Badge>
                 <ProofImage
-                  src="/proof/kalender-vorher-v4.png"
+                  src="/proof/kalender-vorher-v5.png"
                   alt="Terminkalender vor der Kampagne: einzelne Termine in einer Woche"
                   width={1780}
                   height={964}
@@ -138,7 +138,7 @@ export default function ReferenzenPage() {
                   Nach der Kampagne
                 </Badge>
                 <ProofImage
-                  src="/proof/kalender-nachher-v4.png"
+                  src="/proof/kalender-nachher-v5.png"
                   alt="Terminkalender nach der Kampagne: vier Wochen gefüllt mit qualifizierten Erstgesprächen"
                   width={1784}
                   height={1250}

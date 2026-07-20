@@ -108,7 +108,7 @@ export function Proof() {
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
               {[
                 {
-                  src: "/proof/kalender-nachher-v4.png",
+                  src: "/proof/kalender-nachher-v5.png",
                   width: 1784,
                   height: 1250,
                   title: "Gebuchte Termine",
