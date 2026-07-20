@@ -108,7 +108,7 @@ export function Proof() {
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
               {[
                 {
-                  src: "/proof/kalender-nachher-v3.png",
+                  src: "/proof/kalender-nachher-v4.png",
                   width: 1784,
                   height: 1250,
                   title: "Gebuchte Termine",
@@ -116,7 +116,7 @@ export function Proof() {
                   alt: "Terminkalender nach Kampagnenstart, gefüllt mit qualifizierten Erstgesprächen",
                 },
                 {
-                  src: "/proof/pipeline-v3.png",
+                  src: "/proof/pipeline-v4.png",
                   width: 4190,
                   height: 2502,
                   title: "Pipeline & Umsatz",
@@ -125,7 +125,7 @@ export function Proof() {
                   alt: "CRM-Pipeline mit knapp CHF 2 Millionen Gesamtwert und über CHF 104'000 abgeschlossenem Umsatz",
                 },
                 {
-                  src: "/proof/k3-bestellung-v3.png",
+                  src: "/proof/k3-bestellung-v4.png",
                   width: 1444,
                   height: 741,
                   title: "Antworten aus Kampagnen",
