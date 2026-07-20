@@ -53,36 +53,36 @@ const conversionPairs = [
   {
     kunde: "Kunde 1",
     kanal: "E-Mail-Kampagne",
-    termin: { src: "/proof/k1-termin.png", w: 1460, h: 1274 },
-    bestellung: { src: "/proof/k1-bestellung.png", w: 1466, h: 1222 },
+    termin: { src: "/proof/k1-termin-v3.png", w: 1416, h: 937 },
+    bestellung: { src: "/proof/k1-bestellung-v3.png", w: 1430, h: 902 },
   },
   {
     kunde: "Kunde 2",
     kanal: "E-Mail-Kampagne",
-    termin: { src: "/proof/k2-termin.png", w: 1394, h: 928 },
-    bestellung: { src: "/proof/k2-bestellung.png", w: 1394, h: 960 },
+    termin: { src: "/proof/k2-termin-v3.png", w: 1394, h: 928 },
+    bestellung: { src: "/proof/k2-bestellung-v3.png", w: 1394, h: 960 },
   },
   {
     kunde: "Kunde 3",
     kanal: "E-Mail-Kampagne",
-    termin: { src: "/proof/k3-termin.png", w: 1470, h: 1448 },
-    bestellung: { src: "/proof/k3-bestellung.png", w: 1482, h: 1248 },
+    termin: { src: "/proof/k3-termin-v3.png", w: 1428, h: 923 },
+    bestellung: { src: "/proof/k3-bestellung-v3.png", w: 1444, h: 741 },
   },
   {
     kunde: "Kunde 4",
     kanal: "Telefonakquise",
-    termin: { src: "/proof/k4-termin.png", w: 1438, h: 996 },
-    bestellung: { src: "/proof/k4-bestellung.png", w: 1480, h: 1282 },
+    termin: { src: "/proof/k4-termin-v3.png", w: 1438, h: 996 },
+    bestellung: { src: "/proof/k4-bestellung-v3.png", w: 1431, h: 812 },
   },
 ];
 
 const weitereTermine = [
-  { src: "/proof/termin-05-v2.png", w: 1466, h: 1344 },
-  { src: "/proof/termin-06.png", w: 2154, h: 1428 },
-  { src: "/proof/termin-07.png", w: 1462, h: 1252 },
-  { src: "/proof/termin-08.png", w: 1466, h: 1110 },
-  { src: "/proof/termin-09.png", w: 1454, h: 1242 },
-  { src: "/proof/termin-10.png", w: 1462, h: 1390 },
+  { src: "/proof/termin-05-v3.png", w: 1420, h: 763 },
+  { src: "/proof/termin-06-v3.png", w: 2076, h: 764 },
+  { src: "/proof/termin-07-v3.png", w: 1436, h: 910 },
+  { src: "/proof/termin-08-v3.png", w: 1447, h: 683 },
+  { src: "/proof/termin-09-v3.png", w: 1427, h: 737 },
+  { src: "/proof/termin-10-v3.png", w: 1444, h: 680 },
 ];
 
 export default function ReferenzenPage() {
@@ -126,7 +126,7 @@ export default function ReferenzenPage() {
                   Vor der Kampagne
                 </Badge>
                 <ProofImage
-                  src="/proof/kalender-vorher.png"
+                  src="/proof/kalender-vorher-v3.png"
                   alt="Terminkalender vor der Kampagne: einzelne Termine in einer Woche"
                   width={1780}
                   height={964}
@@ -138,7 +138,7 @@ export default function ReferenzenPage() {
                   Nach der Kampagne
                 </Badge>
                 <ProofImage
-                  src="/proof/kalender-nachher.png"
+                  src="/proof/kalender-nachher-v3.png"
                   alt="Terminkalender nach der Kampagne: vier Wochen gefüllt mit qualifizierten Erstgesprächen"
                   width={1784}
                   height={1250}
@@ -161,7 +161,7 @@ export default function ReferenzenPage() {
             </p>
             <div className="mt-8">
               <ProofImage
-                src="/proof/pipeline-v2.png"
+                src="/proof/pipeline-v3.png"
                 alt="CRM-Pipeline mit knapp CHF 2 Millionen Gesamtwert und über CHF 104'000 abgeschlossenem Umsatz"
                 width={4190}
                 height={2502}
