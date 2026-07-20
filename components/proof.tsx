@@ -1,9 +1,6 @@
-import {
-  CalendarCheck,
-  KanbanSquare,
-  MessageSquareText,
-  Quote,
-} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Quote } from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
 
@@ -102,7 +99,7 @@ export function Proof() {
           ))}
         </div>
 
-        {/* Beweisbilder-Galerie — [Platzhalter] */}
+        {/* Beweisbilder — Auszug, komplette Sammlung auf /referenzen */}
         <Reveal>
           <div className="mt-10">
             <p className="text-center text-xs uppercase tracking-widest text-muted-foreground">
@@ -111,40 +108,63 @@ export function Proof() {
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
               {[
                 {
-                  icon: CalendarCheck,
+                  src: "/proof/kalender-nachher.png",
+                  width: 1784,
+                  height: 1250,
                   title: "Gebuchte Termine",
-                  caption:
-                    "[Screenshot folgt — Kalenderwoche mit qualifizierten Erstgesprächen.]",
+                  caption: "Kalenderwochen nach Kampagnenstart",
+                  alt: "Terminkalender nach Kampagnenstart, gefüllt mit qualifizierten Erstgesprächen",
                 },
                 {
-                  icon: KanbanSquare,
+                  src: "/proof/pipeline-v2.png",
+                  width: 4190,
+                  height: 2502,
                   title: "Pipeline & Umsatz",
                   caption:
-                    "[Screenshot folgt — CRM-Pipeline mit Deal-Stufen und Werten, anonymisiert.]",
+                    "Knapp CHF 2 Mio. Pipeline — über CHF 104'000 abgeschlossen",
+                  alt: "CRM-Pipeline mit knapp CHF 2 Millionen Gesamtwert und über CHF 104'000 abgeschlossenem Umsatz",
                 },
                 {
-                  icon: MessageSquareText,
+                  src: "/proof/k3-bestellung.png",
+                  width: 1482,
+                  height: 1248,
                   title: "Antworten aus Kampagnen",
-                  caption:
-                    "[Screenshots folgen — Antworten von Entscheidern bis zur unterschriebenen Offerte, anonymisiert.]",
+                  caption: "«Anbei die unterschriebene Offerte zu ihren Akten.»",
+                  alt: "E-Mail eines Entscheiders mit unterschriebener Offerte, anonymisiert",
                 },
               ].map((proof) => (
-                <div
+                <Link
                   key={proof.title}
-                  className="flex aspect-[4/3] flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card p-6 text-center"
+                  href="/referenzen"
+                  className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-ring/60"
                 >
-                  <proof.icon
-                    className="size-5 text-muted-foreground"
-                    aria-hidden="true"
-                  />
-                  <p className="mt-3 text-sm font-medium text-foreground">
-                    {proof.title}
-                  </p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                    {proof.caption}
-                  </p>
-                </div>
+                  <div className="relative aspect-[4/3] overflow-hidden border-b border-border bg-white">
+                    <Image
+                      src={proof.src}
+                      alt={proof.alt}
+                      width={proof.width}
+                      height={proof.height}
+                      className="h-full w-full object-cover object-top"
+                      sizes="(min-width: 640px) 33vw, 100vw"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="text-sm font-bold text-foreground">{proof.title}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                      {proof.caption}
+                    </p>
+                  </div>
+                </Link>
               ))}
+            </div>
+            <div className="mt-6 text-center">
+              <Link
+                href="/referenzen"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+              >
+                Alle Referenzen und Beweise ansehen
+                <ArrowRight className="size-3.5" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </Reveal>

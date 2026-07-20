@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/#vorgehen", label: "Vorgehen" },
   { href: "/#bausteine", label: "Bausteine" },
   { href: "/#pakete", label: "Pakete" },
+  { href: "/referenzen", label: "Referenzen", page: true },
   { href: "/ueber-uns", label: "Über uns", page: true },
   { href: "/#faq", label: "FAQ" },
 ];
@@ -33,7 +34,7 @@ export function SiteHeader() {
           R&amp;F CONSULTING
         </AnchorLink>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => {
             const Component = link.page ? Link : AnchorLink;
             return (
