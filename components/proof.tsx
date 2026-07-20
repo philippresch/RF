@@ -1,4 +1,9 @@
-import { ImageIcon, Quote } from "lucide-react";
+import {
+  CalendarCheck,
+  KanbanSquare,
+  MessageSquareText,
+  Quote,
+} from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
 
@@ -97,33 +102,66 @@ export function Proof() {
           ))}
         </div>
 
-        {/* Case-Study-Teaser + Reporting-Einblick — [Platzhalter] */}
-        <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <Reveal className="h-full">
-            <div className="flex h-full flex-col justify-center rounded-xl border border-dashed border-border bg-card p-7">
-              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-foreground">
-                Case Study
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                [Platzhalter — Case Study folgt: Ausgangslage, eingesetzte
-                Bausteine und Ergebnis in Zahlen, z.&nbsp;B. «Von X auf Y
-                qualifizierte Termine in Z Monaten».]
-              </p>
+        {/* Beweisbilder-Galerie — [Platzhalter] */}
+        <Reveal>
+          <div className="mt-10">
+            <p className="text-center text-xs uppercase tracking-widest text-muted-foreground">
+              Einblicke aus dem laufenden Betrieb
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {[
+                {
+                  icon: CalendarCheck,
+                  title: "Gebuchte Termine",
+                  caption:
+                    "[Screenshot folgt — Kalenderwoche mit qualifizierten Erstgesprächen.]",
+                },
+                {
+                  icon: KanbanSquare,
+                  title: "Pipeline & Umsatz",
+                  caption:
+                    "[Screenshot folgt — CRM-Pipeline mit Deal-Stufen und Werten, anonymisiert.]",
+                },
+                {
+                  icon: MessageSquareText,
+                  title: "Antworten aus Kampagnen",
+                  caption:
+                    "[Screenshots folgen — Antworten von Entscheidern bis zur unterschriebenen Offerte, anonymisiert.]",
+                },
+              ].map((proof) => (
+                <div
+                  key={proof.title}
+                  className="flex aspect-[4/3] flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card p-6 text-center"
+                >
+                  <proof.icon
+                    className="size-5 text-muted-foreground"
+                    aria-hidden="true"
+                  />
+                  <p className="mt-3 text-sm font-medium text-foreground">
+                    {proof.title}
+                  </p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    {proof.caption}
+                  </p>
+                </div>
+              ))}
             </div>
-          </Reveal>
-          <Reveal delay={80} className="h-full">
-            <div className="flex h-full min-h-44 flex-col items-center justify-center rounded-xl border border-dashed border-border bg-card p-7 text-center">
-              <ImageIcon className="size-5 text-muted-foreground" aria-hidden="true" />
-              <p className="mt-3 text-sm font-medium text-foreground">
-                Einblick ins Reporting
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground">
-                [Platzhalter — anonymisierter Screenshot aus CRM- oder
-                Kampagnen-Reporting folgt.]
-              </p>
-            </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
+
+        {/* Case-Study-Teaser — [Platzhalter] */}
+        <Reveal>
+          <div className="mt-4 flex flex-col justify-center rounded-xl border border-dashed border-border bg-card p-7">
+            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-foreground">
+              Case Study
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              [Platzhalter — Case Study folgt: Ausgangslage, eingesetzte
+              Bausteine und Ergebnis in Zahlen, z.&nbsp;B. «Von X auf Y
+              qualifizierte Termine in Z Monaten».]
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
