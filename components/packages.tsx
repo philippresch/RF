@@ -5,11 +5,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { selectPaket } from "@/lib/inquiry";
 
+import { cn } from "@/lib/utils";
+
 type Package = {
   name: string;
   modules: string[];
   mode?: string;
   description: string;
+  featured?: boolean;
 };
 
 const packages: Package[] = [
@@ -24,6 +27,7 @@ const packages: Package[] = [
     modules: ["Outbound-System", "Vertriebsprozess & CRM"],
     description:
       "Für Unternehmen mit starkem Produkt, aber zu wenigen qualifizierten Terminen.",
+    featured: true,
   },
   {
     name: "Wachstums-Paket",
@@ -63,7 +67,19 @@ export function Packages() {
         <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {packages.map((pkg, index) => (
             <Reveal key={pkg.name} delay={index * 80} className="h-full">
-              <div className="flex h-full flex-col rounded-xl border border-border bg-card p-7 transition-colors hover:border-ring/60">
+              <div
+                className={cn(
+                  "relative flex h-full flex-col rounded-xl border bg-card p-7 transition-colors",
+                  pkg.featured
+                    ? "border-foreground/40"
+                    : "border-border hover:border-ring/60"
+                )}
+              >
+                {pkg.featured ? (
+                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 h-auto whitespace-nowrap px-3 py-1 text-[10px] font-semibold uppercase tracking-widest">
+                    Unsere Empfehlung
+                  </Badge>
+                ) : null}
                 <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-foreground">
                   {pkg.name}
                 </h3>
@@ -90,7 +106,7 @@ export function Packages() {
                   {pkg.description}
                 </p>
                 <Button
-                  variant="outline"
+                  variant={pkg.featured ? "default" : "outline"}
                   className="mt-6 h-10 w-full"
                   nativeButton={false}
                   onClick={() => selectPaket(pkg.name)}
