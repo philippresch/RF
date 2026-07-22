@@ -53,7 +53,7 @@ export async function submitContactRequest(
       },
       body: JSON.stringify({
         from:
-          process.env.CONTACT_FROM ?? "R&F Consulting <onboarding@resend.dev>",
+          process.env.CONTACT_FROM ?? "R&F Growth Partners <onboarding@resend.dev>",
         to: [process.env.CONTACT_TO ?? siteConfig.email],
         reply_to: email,
         subject: `Erstanalyse-Anfrage: ${company}`,

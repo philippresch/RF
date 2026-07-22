@@ -27,11 +27,11 @@ export function SiteHeader() {
       >
         <AnchorLink
           href="/#top"
-          aria-label="R&F Consulting — zur Startseite"
+          aria-label="R&F Growth Partners — zur Startseite"
           className="text-sm font-bold tracking-[0.18em] text-foreground"
           onClick={() => setOpen(false)}
         >
-          R&amp;F CONSULTING
+          R&amp;F GROWTH PARTNERS
         </AnchorLink>
 
         <div className="hidden items-center gap-6 md:flex">

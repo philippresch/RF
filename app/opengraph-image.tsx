@@ -29,7 +29,7 @@ export default function OpengraphImage() {
             letterSpacing: 6,
           }}
         >
-          R&amp;F CONSULTING
+          R&amp;F GROWTH PARTNERS
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>

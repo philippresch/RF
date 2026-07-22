@@ -6,9 +6,9 @@
 export const faqItems = [
   {
     question:
-      "Wie unterscheidet sich R&F Consulting von klassischen Agenturen und Beratungen?",
+      "Wie unterscheidet sich R&F Growth Partners von klassischen Agenturen und Beratungen?",
     answer:
-      "R&F Consulting ist Wachstumspartner mit Umsetzungskompetenz: Wir verbinden Strategieberatung mit dem operativen Aufbau und Betrieb Ihrer Vertriebsprozesse – gemessen an Ergebnissen wie qualifizierten Terminen und Umsatzwachstum, nicht an Aktivitätskennzahlen. Unsere Leistungsbausteine sind standardisiert und werden über den Wachstumsplan individuell konfiguriert. Der gesamte Prozess läuft auf Ihren eigenen Konten und in Ihrem CRM. Sie haben jederzeit volle Transparenz.",
+      "R&F Growth Partners ist Wachstumspartner mit Umsetzungskompetenz: Wir verbinden Strategieberatung mit dem operativen Aufbau und Betrieb Ihrer Vertriebsprozesse – gemessen an Ergebnissen wie qualifizierten Terminen und Umsatzwachstum, nicht an Aktivitätskennzahlen. Unsere Leistungsbausteine sind standardisiert und werden über den Wachstumsplan individuell konfiguriert. Der gesamte Prozess läuft auf Ihren eigenen Konten und in Ihrem CRM. Sie haben jederzeit volle Transparenz.",
   },
   {
     question: "Wie werden die Konditionen kalkuliert?",

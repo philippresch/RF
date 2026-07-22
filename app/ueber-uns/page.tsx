@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "R&F Consulting sind Matthias Frech und Philipp Resch: Unternehmer, die mit dem eigenen Unternehmen in drei Monaten eine siebenstellige Pipeline und sechsstelligen Umsatz aufgebaut haben – heute Wachstumspartner für Technologie-, Industrie- und Robotik-Unternehmen.",
+    "R&F Growth Partners sind Matthias Frech und Philipp Resch: Unternehmer, die mit dem eigenen Unternehmen in drei Monaten eine siebenstellige Pipeline und sechsstelligen Umsatz aufgebaut haben – heute Wachstumspartner für Technologie-, Industrie- und Robotik-Unternehmen.",
 };
 
 const founders = [
