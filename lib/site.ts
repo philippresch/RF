@@ -1,10 +1,9 @@
 /**
  * Zentrale Site-Konfiguration — eine Quelle für SEO, Structured Data und Inhalte.
- * TODO vor Launch: url auf die echte R&F-Growth-Partners-Domain setzen.
  */
 export const siteConfig = {
   name: "R&F Growth Partners",
-  url: "https://rf-consulting.ch",
+  url: "https://rf-growth.ch",
   email: "info@aurobots.ch",
   phone: "+41 44 505 25 51",
   title:
