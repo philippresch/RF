@@ -1,6 +1,6 @@
-# R&F Growth Partners
+# Leverise Growth Partners
 
-> R&F Growth Partners ist der Wachstumspartner für B2B-Tech- und Robotik-Unternehmen im DACH-Raum (Deutschland, Österreich, Schweiz). Wir finden den Engpass in der Neukundengewinnung und lösen ihn mit einem produktisierten Baukasten aus Marketing, Direktansprache und Vertriebsstruktur. R&F Growth Partners ist eine Marke der Aurobots GmbH (Wetzikon ZH, Schweiz); die Gründer Matthias Frech und Philipp Resch haben selbst Robotik im DACH-Markt vertrieben.
+> Leverise Growth Partners ist der Wachstumspartner für B2B-Tech- und Robotik-Unternehmen im DACH-Raum (Deutschland, Österreich, Schweiz). Wir finden den Engpass in der Neukundengewinnung und lösen ihn mit einem produktisierten Baukasten aus Marketing, Direktansprache und Vertriebsstruktur. Leverise ist eine Marke der Aurobots GmbH (Wetzikon ZH, Schweiz); die Gründer Matthias Frech und Philipp Resch haben selbst Robotik im DACH-Markt vertrieben.
 
 ## Vorgehen
 
@@ -17,7 +17,7 @@ Sechs standardisierte Bausteine mit fixem Setup- und Monatspreis und je einer Ke
 - Team (Vertrieb & Struktur): Rollenprofile, Recruiting-Unterstützung, Onboarding. Kennzahl: Zeit bis zur vollen Produktivität.
 - Sales-Coaching (Vertrieb & Struktur): wöchentliche Pipeline-Reviews und Gesprächscoaching. Kennzahl: Abschlussquote.
 
-Jeder Baustein ist in zwei Betriebsmodi verfügbar: Managed (dauerhafter Betrieb durch R&F Growth Partners) oder Build & Transfer (Aufbau, Befähigung des Kundenteams, Übergabe in den Eigenbetrieb).
+Jeder Baustein ist in zwei Betriebsmodi verfügbar: Managed (dauerhafter Betrieb durch Leverise) oder Build & Transfer (Aufbau, Befähigung des Kundenteams, Übergabe in den Eigenbetrieb).
 
 ## Pakete
 
@@ -38,4 +38,4 @@ Keine individuellen Kalkulationen: Jeder Baustein hat einen fixen Setup- und Mon
 
 ## Kontakt
 
-Aurobots GmbH (Marke R&F Growth Partners), Sunnehaldeweg 2, 8620 Wetzikon ZH, Schweiz. E-Mail: info@aurobots.ch. Kostenfreie Erstanalyse über das Kontaktformular auf der Startseite.
+Aurobots GmbH (Marke Leverise), Sunnehaldeweg 2, 8620 Wetzikon ZH, Schweiz. E-Mail: info@aurobots.ch. Kostenfreie Erstanalyse über das Kontaktformular auf der Startseite.

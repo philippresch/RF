@@ -5,13 +5,11 @@ import { siteConfig } from "@/lib/site";
 
 export function Contact() {
   return (
-    <section id="kontakt" className="border-t border-foreground/10 py-24 sm:py-32">
+    <section id="kontakt" className="py-24 sm:py-32">
       <div className="mx-auto max-w-3xl px-6 sm:px-10">
         <div className="text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-            Kontakt
-          </p>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+<p className="eyebrow">Kontakt</p>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Kostenfreie Erstanalyse vereinbaren
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
@@ -50,7 +48,7 @@ export function Contact() {
           Direkter Kontakt:{" "}
           <a
             href={`mailto:${siteConfig.email}`}
-            className="font-medium text-foreground underline-offset-4 hover:underline"
+            className="rounded-sm font-medium text-foreground underline-offset-4 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring"
           >
             {siteConfig.email}
           </a>

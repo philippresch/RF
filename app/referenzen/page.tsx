@@ -89,15 +89,15 @@ export default function ReferenzenPage() {
   return (
     <>
       <SiteHeader />
-      <main className="noise-overlay relative flex-1">
-        <div className="mx-auto max-w-6xl border-x border-foreground/15">
+      <main className="relative flex-1">
+        <div className="mx-auto max-w-6xl">
           {/* Intro */}
           <section className="px-6 pb-16 pt-36 sm:px-10 sm:pt-44">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              <p className="eyebrow">
                 Referenzen
               </p>
-              <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+              <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
                 Ergebnisse aus{" "}
                 <span className="text-muted-foreground">eigenem Vertrieb</span>
               </h1>
@@ -111,8 +111,8 @@ export default function ReferenzenPage() {
           </section>
 
           {/* Kalender vorher/nachher */}
-          <section className="border-t border-foreground/10 px-6 py-16 sm:px-10">
-            <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+          <section className="border-t border-border px-6 py-16 sm:px-10">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               Der Kalender: vor und nach der Kampagne
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
@@ -149,8 +149,8 @@ export default function ReferenzenPage() {
           </section>
 
           {/* Pipeline */}
-          <section className="border-t border-foreground/10 px-6 py-16 sm:px-10">
-            <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+          <section className="border-t border-border px-6 py-16 sm:px-10">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               Knapp CHF 2 Millionen in der Pipeline
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
@@ -170,8 +170,8 @@ export default function ReferenzenPage() {
           </section>
 
           {/* Termin → Bestellung */}
-          <section className="border-t border-foreground/10 px-6 py-16 sm:px-10">
-            <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+          <section className="border-t border-border px-6 py-16 sm:px-10">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               Vom Termin zur Bestellung
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
@@ -184,7 +184,7 @@ export default function ReferenzenPage() {
               {conversionPairs.map((pair) => (
                 <div key={pair.kunde}>
                   <div className="mb-4 flex items-center gap-3">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-foreground">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-foreground">
                       {pair.kunde}
                     </p>
                     <Badge variant="outline" className="h-auto px-2.5 py-0.5 text-[10px] font-medium text-muted-foreground">
@@ -226,8 +226,8 @@ export default function ReferenzenPage() {
           </section>
 
           {/* Weitere Terminbestätigungen */}
-          <section className="border-t border-foreground/10 px-6 py-16 sm:px-10">
-            <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+          <section className="border-t border-border px-6 py-16 sm:px-10">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               Qualifizierte Termine durch hochpersonalisierte E-Mail-Sequenzen
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
@@ -248,8 +248,8 @@ export default function ReferenzenPage() {
           </section>
 
           {/* CTA */}
-          <section className="border-t border-foreground/10 px-6 py-20 text-center sm:px-10">
-            <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+          <section className="border-t border-border px-6 py-20 text-center sm:px-10">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               Solche Ergebnisse für Ihr Unternehmen?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">

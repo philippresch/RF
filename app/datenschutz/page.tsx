@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
+/* TODO: Rechtsträger prüfen — Firmenangaben (Aurobots GmbH) bewusst unverändert. */
 export default function DatenschutzPage() {
   const { legal } = siteConfig;
   return (

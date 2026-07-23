@@ -2,14 +2,14 @@
  * Zentrale Site-Konfiguration — eine Quelle für SEO, Structured Data und Inhalte.
  */
 export const siteConfig = {
-  name: "R&F Growth Partners",
+  name: "Leverise Growth Partners",
   url: "https://leverise.ch",
   email: "info@aurobots.ch",
   phone: "+41 44 505 25 51",
   title:
-    "R&F Growth Partners | Wachstumspartner für B2B-Tech & Robotics — Neukundengewinnung im DACH-Raum",
+    "Leverise Growth Partners | Wachstumspartner für B2B-Tech & Robotics — Neukundengewinnung im DACH-Raum",
   description:
-    "R&F Growth Partners ist Ihr Wachstumspartner für B2B-Tech & Robotics: Wachstums-Audit und modulare Leistungsbausteine aus Marketing, Direktansprache und Vertriebsstruktur — für planbare Neukundengewinnung und Umsatzwachstum im DACH-Raum.",
+    "Leverise Growth Partners ist Ihr Wachstumspartner für B2B-Tech & Robotics: Wachstums-Audit und modulare Leistungsbausteine aus Marketing, Direktansprache und Vertriebsstruktur — für planbare Neukundengewinnung und Umsatzwachstum im DACH-Raum.",
   keywords: [
     "Wachstumspartner B2B",
     "B2B Vertriebsberatung",
@@ -31,7 +31,7 @@ export const siteConfig = {
   ],
   region: "DACH",
   legal: {
-    /** R&F Growth Partners ist eine Marke der Aurobots GmbH */
+    /** Leverise ist eine Marke der Aurobots GmbH — TODO: Rechtsträger prüfen */
     companyName: "Aurobots GmbH",
     street: "Sunnehaldeweg 2",
     city: "8620 Wetzikon ZH",

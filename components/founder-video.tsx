@@ -9,12 +9,12 @@ import { Reveal } from "@/components/reveal";
  */
 export function FounderVideo() {
   return (
-    <section className="px-6 pb-24 sm:px-10 sm:pb-32">
+    <section className="px-6 pb-24 sm:px-10 sm:pb-28">
       <Reveal>
         <div className="mx-auto max-w-3xl">
           <Image
             src="/platzhalter-video.jpg"
-            alt="Vorschaubild zum Founder-Video von R&F Growth Partners"
+            alt="Vorschaubild zum Founder-Video von Leverise Growth Partners"
             width={1020}
             height={692}
             className="w-full rounded-xl border border-border"

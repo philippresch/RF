@@ -19,12 +19,12 @@ export default function DankePage() {
   return (
     <>
       <SiteHeader />
-      <main className="noise-overlay relative flex-1">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center border-x border-foreground/15 px-6 pb-32 pt-48 text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+      <main className="relative flex-1">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center px-6 pb-32 pt-48 text-center">
+          <p className="eyebrow">
             Anfrage erhalten
           </p>
-          <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Vielen Dank.
           </h1>
           <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">

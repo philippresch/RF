@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { AnchorLink } from "@/components/anchor-link";
+import { Wordmark } from "@/components/wordmark";
 
 const footerLinks = [
   { href: "/ueber-uns", label: "Über uns" },
@@ -12,11 +13,9 @@ const footerLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-foreground/10">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 border-x border-foreground/15 px-6 py-10 sm:flex-row">
-        <p className="text-sm font-bold tracking-[0.18em] text-foreground">
-          R&amp;F GROWTH PARTNERS
-        </p>
+    <footer className="section-dark">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 border-t border-border px-6 py-10 sm:flex-row">
+        <Wordmark className="text-base" />
         <p className="text-xs text-muted-foreground">
           B2B-Vertriebsberatung · Tech &amp; Robotic · DACH
         </p>
@@ -27,7 +26,7 @@ export function SiteFooter() {
               <Component
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="rounded-sm text-muted-foreground outline-none transition-colors hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring"
               >
                 {link.label}
               </Component>

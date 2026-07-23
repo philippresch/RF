@@ -2,10 +2,11 @@ import { ImageResponse } from "next/og";
 
 import { siteConfig } from "@/lib/site";
 
-export const alt = `${siteConfig.name} — Ihr Wachstumspartner für B2B-Tech & Robotic`;
+export const alt = `${siteConfig.name} — Wachstumspartner für B2B-Tech & Robotics`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+/** OG-Image: Wortmarke zentriert auf Ink, Markenverlauf als Akzentlinie */
 export default function OpengraphImage() {
   return new ImageResponse(
     (
@@ -15,52 +16,50 @@ export default function OpengraphImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          background: "#ffffff",
-          color: "#111111",
-          padding: 80,
+          alignItems: "center",
+          justifyContent: "center",
+          background: "#0A0A18",
+          color: "#FAFAFC",
           fontFamily: "sans-serif",
         }}
       >
         <div
           style={{
-            fontSize: 28,
+            fontSize: 96,
             fontWeight: 700,
             letterSpacing: 6,
           }}
         >
-          R&amp;F GROWTH PARTNERS
+          LEVERISE
         </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          <div
-            style={{
-              fontSize: 64,
-              fontWeight: 800,
-              lineHeight: 1.1,
-              letterSpacing: -2,
-              maxWidth: 900,
-            }}
-          >
-            Ihr Wachstumspartner für B2B-Tech & Robotic
-          </div>
-          <div style={{ fontSize: 28, color: "#71717a", maxWidth: 880 }}>
-            Sichtbarkeit · Direktansprache · Vertriebsstruktur — DACH
-          </div>
-        </div>
-
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            borderTop: "1px solid #e4e4e7",
-            paddingTop: 32,
-            fontSize: 22,
-            color: "#71717a",
+            marginTop: 20,
+            fontSize: 30,
+            fontWeight: 600,
+            letterSpacing: 22,
+            color: "#A7ABC0",
           }}
         >
-          <div>Qualifizierte B2B-Termine. Quellenverifiziert.</div>
-          <div>{siteConfig.url.replace("https://", "")}</div>
+          GROWTH PARTNERS
+        </div>
+        <div
+          style={{
+            marginTop: 48,
+            width: 420,
+            height: 4,
+            borderRadius: 2,
+            backgroundImage: "linear-gradient(90deg, #2C13E3, #09DBFE)",
+          }}
+        />
+        <div
+          style={{
+            marginTop: 48,
+            fontSize: 28,
+            color: "#A7ABC0",
+          }}
+        >
+          Wachstumspartner für B2B-Tech &amp; Robotics
         </div>
       </div>
     ),

@@ -5,14 +5,12 @@ import { Button } from "@/components/ui/button";
 
 export function Audit() {
   return (
-    <section id="audit" className="border-t border-foreground/10 py-24 sm:py-32">
-      <div className="px-6 sm:px-10">
+    <section id="audit" className="py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <Reveal>
           <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-card p-8 text-center sm:p-12">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-              Der Einstieg
-            </p>
-            <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+<p className="eyebrow">Der Einstieg</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Das Wachstums-Audit
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">

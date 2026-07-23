@@ -160,20 +160,25 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <SiteHeader />
-      <main className="noise-overlay relative flex-1">
-        {/* Optimus-Grid: feine vertikale Linien rahmen den Inhalt ein */}
-        <div className="mx-auto max-w-6xl border-x border-foreground/15">
+      <main className="relative flex-1">
+        {/* Sektionsrhythmus: dunkle und helle Blöcke wechseln sich ab,
+            getrennt durch die angeschrägten Hebel-Kanten */}
+        <div className="section-dark slant-bottom">
           <Hero />
           <FounderVideo />
-          <StartingPoints />
-          <Process />
-          <Modules />
+        </div>
+        <StartingPoints />
+        <Process />
+        <Modules />
+        <div className="section-dark slant-top slant-bottom">
           <Packages />
           <Proof />
-          <Audit />
-          <Reveal>
-            <Faq />
-          </Reveal>
+        </div>
+        <Audit />
+        <Reveal>
+          <Faq />
+        </Reveal>
+        <div className="section-dark slant-top">
           <Reveal>
             <Contact />
           </Reveal>

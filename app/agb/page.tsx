@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 /**
  * Adaptiert von den AGB der Aurobots GmbH (Version 2, 09.01.2026) auf
- * Beratungs- und Dienstleistungsmandate der Marke R&F Growth Partners.
- * TODO vor Launch: juristisch prüfen lassen.
+ * Beratungs- und Dienstleistungsmandate der Marke Leverise Growth Partners.
+ * TODO: Rechtsträger prüfen — juristisch prüfen lassen.
  */
 export default function AgbPage() {
   const { legal } = siteConfig;

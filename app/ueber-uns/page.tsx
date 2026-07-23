@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "R&F Growth Partners sind Matthias Frech und Philipp Resch: Unternehmer, die mit dem eigenen Unternehmen in drei Monaten eine siebenstellige Pipeline und sechsstelligen Umsatz aufgebaut haben – heute Wachstumspartner für Technologie-, Industrie- und Robotik-Unternehmen.",
+    "Leverise Growth Partners sind Matthias Frech und Philipp Resch: Unternehmer, die mit dem eigenen Unternehmen in drei Monaten eine siebenstellige Pipeline und sechsstelligen Umsatz aufgebaut haben – heute Wachstumspartner für Technologie-, Industrie- und Robotik-Unternehmen.",
 };
 
 const founders = [
@@ -68,15 +68,15 @@ export default function UeberUnsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
       />
       <SiteHeader />
-      <main className="noise-overlay relative flex-1">
-        <div className="mx-auto max-w-6xl border-x border-foreground/15">
+      <main className="relative flex-1">
+        <div className="mx-auto max-w-6xl">
           {/* Intro */}
           <section className="px-6 pb-20 pt-36 sm:px-10 sm:pt-44">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              <p className="eyebrow">
                 Über uns
               </p>
-              <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+              <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
                 Vertriebsberatung aus{" "}
                 <span className="text-muted-foreground">eigener Praxis</span>
               </h1>
@@ -92,7 +92,7 @@ export default function UeberUnsPage() {
           </section>
 
           {/* Gründer */}
-          <section className="border-t border-foreground/10 px-6 py-20 sm:px-10">
+          <section className="border-t border-border px-6 py-20 sm:px-10">
             <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
               {founders.map((founder) => (
                 <div
@@ -126,9 +126,9 @@ export default function UeberUnsPage() {
           </section>
 
           {/* Warum wir */}
-          <section className="border-t border-foreground/10 px-6 py-20 sm:px-10">
+          <section className="border-t border-border px-6 py-20 sm:px-10">
             <div className="mx-auto max-w-3xl">
-              <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
                 Warum wir?
               </h2>
               <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
@@ -153,8 +153,8 @@ export default function UeberUnsPage() {
           </section>
 
           {/* CTA */}
-          <section className="border-t border-foreground/10 px-6 py-20 text-center sm:px-10">
-            <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+          <section className="border-t border-border px-6 py-20 text-center sm:px-10">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               Lernen Sie uns kennen
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">

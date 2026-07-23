@@ -5,22 +5,25 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 
 /**
- * Referenzen-Sektion — Beweisbilder aus dem laufenden Betrieb.
- * Kennzahlen, Kundenlogos, Testimonials und Case Study folgen später.
+ * Referenzen — das dunkle Beweisband mit Einblicken aus dem laufenden
+ * Betrieb. Kennzahlen, Kundenlogos, Testimonials und Case Study folgen
+ * später. Einer von zwei Einsatzorten des Markenverlaufs (Akzentlinie).
  */
 
 export function Proof() {
   return (
-    <section id="referenzen" className="border-t border-foreground/10 py-24 sm:py-32">
-      <div className="px-6 sm:px-10">
+    <section id="referenzen" className="border-t border-border py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-              Referenzen
-            </p>
-            <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+            <p className="eyebrow">Referenzen</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Ergebnisse, an denen wir uns messen lassen
             </h2>
+            <div
+              aria-hidden="true"
+              className="mx-auto mt-6 h-0.5 w-24 rounded-full bg-[image:var(--brand-gradient)]"
+            />
           </div>
         </Reveal>
 
@@ -61,7 +64,7 @@ export function Proof() {
                 <Link
                   key={proof.title}
                   href="/referenzen"
-                  className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-ring/60"
+                  className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-brand-accent/40"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden border-b border-border bg-white">
                     <Image
