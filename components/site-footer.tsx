@@ -15,7 +15,7 @@ export function SiteFooter() {
   return (
     <footer className="section-dark">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 border-t border-border px-6 py-10 sm:flex-row">
-        <Wordmark className="text-lg" />
+        <Wordmark className="h-8" />
         <p className="text-xs text-muted-foreground">
           B2B-Vertriebsberatung · Tech &amp; Robotic · DACH
         </p>
