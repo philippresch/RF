@@ -14,7 +14,6 @@ export function Wordmark({ className }: { className?: string }) {
       </span>
       <span
         className="mt-[0.4em] text-[0.36em] font-semibold tracking-[0.3em] text-foreground"
-        aria-hidden="true"
       >
         GROWTH&nbsp;PARTNERS
       </span>

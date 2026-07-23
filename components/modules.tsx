@@ -202,6 +202,7 @@ export function Modules() {
             selectedCount > 0 ? "opacity-100" : "pointer-events-none opacity-0"
           )}
           aria-hidden={selectedCount === 0}
+          inert={selectedCount === 0}
         >
           <Button
             className="h-11 px-7"

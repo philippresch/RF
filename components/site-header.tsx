@@ -28,7 +28,6 @@ export function SiteHeader() {
       >
         <AnchorLink
           href="/#top"
-          aria-label="Leverise Growth Partners — zur Startseite"
           className="rounded-sm text-base outline-none focus-visible:ring-2 focus-visible:ring-ring"
           onClick={() => setOpen(false)}
         >
