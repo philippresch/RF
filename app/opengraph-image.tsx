@@ -28,6 +28,9 @@ export default function OpengraphImage() {
             fontSize: 96,
             fontWeight: 700,
             letterSpacing: 6,
+            backgroundImage: "linear-gradient(90deg, #2C13E3, #0180CD, #09DBFE)",
+            backgroundClip: "text",
+            color: "transparent",
           }}
         >
           LEVERISE
