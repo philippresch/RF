@@ -1,6 +1,16 @@
 "use client";
 
-import { ArrowRight, Check, Plus } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  GraduationCap,
+  Megaphone,
+  Newspaper,
+  Plus,
+  Send,
+  Users,
+  Workflow,
+} from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
@@ -12,6 +22,7 @@ import {
 import { cn } from "@/lib/utils";
 
 type Module = {
+  icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
   name: string;
   description: string;
   kpi: string;
@@ -27,12 +38,14 @@ const groups: ModuleGroup[] = [
     label: "Sichtbarkeit & Nachfrage",
     modules: [
       {
+        icon: Megaphone,
         name: "Paid Ads",
         description:
           "LinkedIn- und Google-Kampagnen inklusive Landingpage, Tracking und Retargeting — für planbare Inbound-Anfragen aus Ihrer Zielgruppe.",
         kpi: "Qualifizierte Anfragen pro Monat",
       },
       {
+        icon: Newspaper,
         name: "Content & Sichtbarkeit",
         description:
           "Case Studies und LinkedIn-Präsenz für Unternehmen und Geschäftsführung — Vertrauen dort, wo Ihre Zielkunden hinschauen.",
@@ -44,6 +57,7 @@ const groups: ModuleGroup[] = [
     label: "Direktansprache",
     modules: [
       {
+        icon: Send,
         name: "Outbound-System",
         description:
           "Quellenverifizierte Kontaktrecherche und Multichannel-Kampagnen über Telefon, E-Mail und LinkedIn — qualifizierte Termine mit Entscheidern, auf Ihren eigenen Konten und in Ihrem CRM.",
@@ -55,18 +69,21 @@ const groups: ModuleGroup[] = [
     label: "Vertrieb & Struktur",
     modules: [
       {
+        icon: Workflow,
         name: "Vertriebsprozess & CRM",
         description:
           "Pipeline-Stufen, Automationen, Playbooks und Forecasting — damit aus Terminen systematisch Abschlüsse werden.",
         kpi: "Conversion je Pipeline-Stufe",
       },
       {
+        icon: Users,
         name: "Team",
         description:
           "Rollenprofile, Recruiting-Unterstützung, Onboarding und Befähigung Ihrer Vertriebsmitarbeiter.",
         kpi: "Zeit bis zur vollen Produktivität",
       },
       {
+        icon: GraduationCap,
         name: "Sales-Coaching",
         description:
           "Wöchentliche Pipeline-Reviews und Gesprächscoaching für Ihr Team.",
@@ -98,7 +115,10 @@ function ModuleCard({
             : "border-border hover:-translate-y-0.5 hover:border-brand-primary/40"
         )}
       >
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-between">
+          <span className="flex size-9 items-center justify-center rounded-lg bg-brand-primary/10 text-brand-primary">
+            <module.icon className="size-4" aria-hidden />
+          </span>
           <span
             className={cn(
               "flex size-5 items-center justify-center rounded-full border transition-colors",
