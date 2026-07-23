@@ -12,10 +12,13 @@ export function Reveal({
   children,
   className,
   delay = 0,
+  from = "up",
 }: {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  /** Richtung, aus der der Inhalt einblendet */
+  from?: "up" | "left" | "right";
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -45,7 +48,12 @@ export function Reveal({
   return (
     <div
       ref={ref}
-      className={cn("reveal", className)}
+      className={cn(
+        "reveal",
+        from === "left" && "reveal-left",
+        from === "right" && "reveal-right",
+        className
+      )}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}

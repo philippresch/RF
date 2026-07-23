@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative overflow-hidden pb-28 pt-40 sm:pb-36 sm:pt-48">
       {/* Hebel-Diagonale — das eine grafische Element des Heros,
           verläuft unterhalb der CTA-Zeile durch den freien Raum */}
-      <div aria-hidden="true" className="lever-line bottom-[12%]" />
+      <div aria-hidden="true" className="lever-line bottom-[4%]" />
 
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <p className="eyebrow hero-seq hero-seq-1 mb-6">

@@ -28,7 +28,7 @@ export function SiteHeader() {
       >
         <AnchorLink
           href="/#top"
-          className="rounded-sm text-base outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="rounded-sm text-xl outline-none focus-visible:ring-2 focus-visible:ring-ring"
           onClick={() => setOpen(false)}
         >
           <Wordmark />

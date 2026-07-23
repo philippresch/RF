@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowDown, ArrowRight } from "lucide-react";
 
 import { AnchorLink } from "@/components/anchor-link";
+import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
@@ -43,7 +44,7 @@ function ProofImage({
         height={height}
         priority={priority}
         className="h-auto w-full"
-        sizes="(min-width: 1024px) 50vw, 100vw"
+        sizes="(min-width: 1024px) 896px, 100vw"
       />
     </a>
   );
@@ -155,9 +156,7 @@ export default function ReferenzenPage() {
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
               CRM-Pipeline mit einem Gesamtwert von knapp CHF 2 Millionen —
-              über CHF 104&#8217;000 davon bereits abgeschlossen («Won»),
-              weitere sechsstellige Stufen in Verhandlung. Jede Karte ist ein
-              realer Deal aus der Kampagne.
+              über CHF 104&#8217;000 davon bereits abgeschlossen.
             </p>
             <div className="mt-8">
               <ProofImage
@@ -175,15 +174,16 @@ export default function ReferenzenPage() {
               Vom Termin zur Bestellung
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Vier vollständige Verläufe: links die Terminbestätigung des
-              Entscheiders, rechts die spätere Bestellung bzw. unterschriebene
-              Offerte desselben Kunden.
+              Vier vollständige Verläufe: zuerst die Terminbestätigung des
+              Entscheiders, darunter die spätere Bestellung bzw.
+              unterschriebene Offerte desselben Kunden.
             </p>
 
-            <div className="mt-10 space-y-14">
+            {/* Gross und untereinander, damit jeder Ausschnitt ohne Klick lesbar ist */}
+            <div className="mx-auto mt-10 max-w-3xl space-y-20">
               {conversionPairs.map((pair) => (
                 <div key={pair.kunde}>
-                  <div className="mb-4 flex items-center gap-3">
+                  <div className="mb-5 flex items-center gap-3">
                     <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-foreground">
                       {pair.kunde}
                     </p>
@@ -192,34 +192,34 @@ export default function ReferenzenPage() {
                     </Badge>
                     <div className="h-px flex-1 bg-border" aria-hidden="true" />
                   </div>
-                  <div className="grid grid-cols-1 items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
-                    <div>
-                      <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                        Termin
-                      </p>
-                      <ProofImage
-                        src={pair.termin.src}
-                        alt={`${pair.kunde}: Terminbestätigung des Entscheiders (${pair.kanal})`}
-                        width={pair.termin.w}
-                        height={pair.termin.h}
-                      />
-                    </div>
-                    <div className="flex justify-center text-muted-foreground" aria-hidden="true">
-                      <ArrowDown className="size-5 lg:hidden" />
-                      <ArrowRight className="hidden size-5 lg:block" />
-                    </div>
-                    <div>
-                      <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                        Bestellung
-                      </p>
-                      <ProofImage
-                        src={pair.bestellung.src}
-                        alt={`${pair.kunde}: Bestellung bzw. unterschriebene Offerte`}
-                        width={pair.bestellung.w}
-                        height={pair.bestellung.h}
-                      />
-                    </div>
+                  <Reveal>
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                      Termin
+                    </p>
+                    <ProofImage
+                      src={pair.termin.src}
+                      alt={`${pair.kunde}: Terminbestätigung des Entscheiders (${pair.kanal})`}
+                      width={pair.termin.w}
+                      height={pair.termin.h}
+                    />
+                  </Reveal>
+                  <div
+                    className="my-5 flex justify-center text-muted-foreground"
+                    aria-hidden="true"
+                  >
+                    <ArrowDown className="size-5" />
                   </div>
+                  <Reveal>
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                      Bestellung
+                    </p>
+                    <ProofImage
+                      src={pair.bestellung.src}
+                      alt={`${pair.kunde}: Bestellung bzw. unterschriebene Offerte`}
+                      width={pair.bestellung.w}
+                      height={pair.bestellung.h}
+                    />
+                  </Reveal>
                 </div>
               ))}
             </div>
@@ -234,15 +234,24 @@ export default function ReferenzenPage() {
               Eine Auswahl weiterer Antworten von Entscheidern —
               Geschäftsleitung, Betriebs- und Bereichsleitung.
             </p>
-            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Zickzack-Galerie: grosse, gut lesbare Ausschnitte, die beim
+                Scrollen abwechselnd von links und rechts hereingleiten */}
+            <div className="mt-10 space-y-12">
               {weitereTermine.map((img, i) => (
-                <ProofImage
+                <Reveal
                   key={img.src}
-                  src={img.src}
-                  alt={`Terminbestätigung eines Entscheiders aus der Outbound-Kampagne (Beispiel ${i + 5})`}
-                  width={img.w}
-                  height={img.h}
-                />
+                  from={i % 2 === 0 ? "left" : "right"}
+                  className={
+                    i % 2 === 0 ? "max-w-3xl lg:mr-auto" : "max-w-3xl lg:ml-auto"
+                  }
+                >
+                  <ProofImage
+                    src={img.src}
+                    alt={`Terminbestätigung eines Entscheiders aus der Outbound-Kampagne (Beispiel ${i + 5})`}
+                    width={img.w}
+                    height={img.h}
+                  />
+                </Reveal>
               ))}
             </div>
           </section>

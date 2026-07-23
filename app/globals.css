@@ -78,7 +78,7 @@
   --card-foreground: var(--ink);
   --popover: #ffffff;
   --popover-foreground: var(--ink);
-  --primary: var(--brand-primary);
+  --primary: var(--brand-mid);
   --primary-foreground: #ffffff;
   --secondary: #ededf4;
   --secondary-foreground: var(--ink);
@@ -89,7 +89,7 @@
   --destructive: oklch(0.505 0.213 27.518);
   --border: #e2e3ee;
   --input: #e2e3ee;
-  --ring: var(--brand-primary);
+  --ring: var(--brand-mid);
   --chart-1: var(--brand-primary);
   --chart-2: var(--brand-mid);
   --chart-3: var(--brand-accent);
@@ -114,7 +114,7 @@
   --card-foreground: #fafafc;
   --popover: #13132a;
   --popover-foreground: #fafafc;
-  --primary: var(--brand-primary);
+  --primary: var(--brand-mid);
   --primary-foreground: #ffffff;
   --secondary: #1c1c38;
   --secondary-foreground: #fafafc;
@@ -262,6 +262,13 @@
     transition:
       opacity 0.35s ease-out,
       transform 0.35s ease-out;
+  }
+  /* Richtungs-Varianten: Inhalte gleiten seitlich herein (Referenzen-Galerie) */
+  .reveal.reveal-left {
+    transform: translateX(-32px);
+  }
+  .reveal.reveal-right {
+    transform: translateX(32px);
   }
   .reveal.in {
     opacity: 1;

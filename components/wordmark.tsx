@@ -13,7 +13,7 @@ export function Wordmark({ className }: { className?: string }) {
         LEVERISE
       </span>
       <span
-        className="mt-[0.4em] text-[0.36em] font-semibold tracking-[0.3em] text-foreground"
+        className="mt-[0.4em] text-[0.44em] font-semibold tracking-[0.3em] text-foreground"
       >
         GROWTH&nbsp;PARTNERS
       </span>

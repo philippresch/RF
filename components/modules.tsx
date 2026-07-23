@@ -111,8 +111,8 @@ function ModuleCard({
         className={cn(
           "group flex h-full w-full cursor-pointer flex-col rounded-xl border bg-card p-7 text-left transition-all duration-200",
           selected
-            ? "-translate-y-0.5 border-brand-primary"
-            : "border-border hover:-translate-y-0.5 hover:border-brand-primary/40"
+            ? "-translate-y-0.5 border-brand-mid"
+            : "border-border hover:-translate-y-0.5 hover:border-brand-mid/40"
         )}
       >
         <div className="flex items-center justify-between">
@@ -123,7 +123,7 @@ function ModuleCard({
             className={cn(
               "flex size-5 items-center justify-center rounded-full border transition-colors",
               selected
-                ? "border-brand-primary bg-brand-primary text-white"
+                ? "border-brand-mid bg-brand-mid text-white"
                 : "border-border text-transparent"
             )}
             aria-hidden="true"
@@ -147,8 +147,8 @@ function ModuleCard({
           className={cn(
             "mt-5 inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-lg border text-xs font-semibold transition-colors",
             selected
-              ? "border-brand-primary bg-brand-primary text-white"
-              : "border-border text-muted-foreground group-hover:border-brand-primary/40 group-hover:text-brand-primary"
+              ? "border-brand-mid bg-brand-mid text-white"
+              : "border-border text-muted-foreground group-hover:border-brand-mid/40 group-hover:text-brand-primary"
           )}
         >
           {selected ? (
