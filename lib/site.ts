@@ -3,7 +3,7 @@
  */
 export const siteConfig = {
   name: "R&F Growth Partners",
-  url: "https://rf-growth.ch",
+  url: "https://leverise.ch",
   email: "info@aurobots.ch",
   phone: "+41 44 505 25 51",
   title:

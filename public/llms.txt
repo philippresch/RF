@@ -32,9 +32,9 @@ Keine individuellen Kalkulationen: Jeder Baustein hat einen fixen Setup- und Mon
 
 ## Seiten
 
-- [Startseite](https://rf-growth.ch/): Angebot, Vorgehen, Bausteine, Pakete, FAQ, Kontakt
-- [Über uns](https://rf-growth.ch/ueber-uns): Gründer, Herkunft aus der Robotik-Vertriebspraxis
-- [Impressum](https://rf-growth.ch/impressum) · [Datenschutz](https://rf-growth.ch/datenschutz) · [AGB](https://rf-growth.ch/agb)
+- [Startseite](https://leverise.ch/): Angebot, Vorgehen, Bausteine, Pakete, FAQ, Kontakt
+- [Über uns](https://leverise.ch/ueber-uns): Gründer, Herkunft aus der Robotik-Vertriebspraxis
+- [Impressum](https://leverise.ch/impressum) · [Datenschutz](https://leverise.ch/datenschutz) · [AGB](https://leverise.ch/agb)
 
 ## Kontakt
 
